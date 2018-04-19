@@ -20,7 +20,12 @@ import javax.swing.JTextField;
  */
 public class Login_201700507 {
     
-    public Login_201700507(){
+    
+    static String nombreNave;
+    JTextField usuariotxt;
+
+
+    public void Registro(){
     
         Font fuente = new Font("Copperplate Gothic Light",1,17);
         Font fuenteTextField = new Font("Monospaced",1,15);
@@ -38,10 +43,12 @@ public class Login_201700507 {
         login.add(info);
         info.setFont(fuente);
         
-            JTextField usuariotxt = new JTextField();
+            usuariotxt = new JTextField();
             usuariotxt.setBounds(175,115,350,25);
             usuariotxt.setFont(fuenteTextField);
             login.add(usuariotxt);
+            
+            
         
         JButton aceptarBoton = new JButton("Aceptar");
         aceptarBoton.setBounds(260,185,150,75);
@@ -49,8 +56,10 @@ public class Login_201700507 {
         aceptarBoton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
+                nombreNave = usuariotxt.getText();
                 login.dispose();
-                IPC1Practica2_2017005071 galaga = new IPC1Practica2_2017005071();
+                IPC1Practica2_201700507 galaga = new IPC1Practica2_201700507();
+                
             }
         });
         login.add(aceptarBoton);
@@ -59,5 +68,5 @@ public class Login_201700507 {
     
     }
     
-    
+ 
 }
